@@ -1,12 +1,16 @@
-
+#!groovy
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
-      stages {
-        stage('log version info') {
-      steps {
-        sh 'mvn --version'
-        sh 'mvn clean install'
-      }
-    }
-  }
-}
+    agent none
+   stages {     
+    stage('Maven Install') {
+      agent {         
+       docker {          
+         image 'maven:3.5.0'         
+     }       
+  }       
+  steps {
+       sh 'mvn clean install'
+       }
+     }
+   }
+ }
