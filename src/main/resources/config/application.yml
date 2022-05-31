@@ -1,29 +1,4 @@
 spring:
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://10.111.201.120:3307/db_digitalaccountopen
-    username: treasuryfx
-    password: System
-    validationQuery: SELECT 1 FROM DUAL         
-  jpa:
-    database: mysql
-    show-sql: true
-    hibernate:
-      ddl-auto: none
-      able_lazy_load_no_trans: true
-      jdbc:
-        time_zone: UTC
-      event:
-        merge:
-          entity_copy_observer: allow
-    properties:
-       hibernate.jdbc.batch_size: 20 
-  hikari:
-    connection-timeout: 60000
-    maximum-pool-size: 20
-  main:
-    allow-bean-definition-overriding: true
-
 management:
   server:
     port: 8085
