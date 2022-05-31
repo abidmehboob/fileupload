@@ -143,11 +143,11 @@
 			<artifactId>jasperreports</artifactId>
 			<version>6.3.0</version>
 		</dependency> -->
-<!-- 		<dependency>
+ 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ojdbc8</artifactId>
 			<version>19.6.0.0</version>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
