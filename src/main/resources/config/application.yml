@@ -1,13 +1,13 @@
 spring:
- datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://10.111.201.33:1551/btuata
+  datasource:
+    driverClassName: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@10.111.201.33:1551:btuata
     username: btuser
     password: btuser
-    validationQuery: SELECT 1 FROM DUAL         
+    validationQuery: SELECT 1 FROM DUAL
   jpa:
-    database: mysql
-    show-sql: true
+    database: oracle
+    show-sql: false
     hibernate:
       ddl-auto: none
       able_lazy_load_no_trans: true
@@ -23,9 +23,10 @@ spring:
     maximum-pool-size: 20
   main:
     allow-bean-definition-overriding: true
+
 management:
   server:
-    port: 8085
+    port: 8086
   security:
     enabled: false
   endpoints:
@@ -37,7 +38,7 @@ management:
       show-details: always
 
 server:
-  port: 8082
+  port: 8083
 
 logbook:
   include:
@@ -53,4 +54,3 @@ logbook:
       - access_token
       - password
       - token
-
